@@ -24,10 +24,13 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            Background.Color = Color.White;
-            Text.Draw("Welcome to Pixel Quiz!", 100, 50);
+             Window.ClearBackground(Color.Cyan);
+
+            Text.Draw("What year did Nintendo start as a company?", 50, 5);
             Text.Color = Color.Black;
-            Text.Size = 50;
+            Text.Size = 30;
+        } 
+        
         }
     }
 
