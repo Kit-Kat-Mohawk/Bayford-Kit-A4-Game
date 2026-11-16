@@ -1,4 +1,5 @@
 ﻿// Include the namespaces (code libraries) you need below.
+using MohawkGame2D;
 using System;
 using System.Numerics;
 
@@ -10,6 +11,8 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
+        QAndA question = new QAndA();
+
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
@@ -17,6 +20,14 @@ namespace MohawkGame2D
         {
             Window.SetTitle("Pixel Quiz");
             Window.SetSize(800, 600);
+
+            //     Setup QAndA
+            question.Question = "When did Nintendo start as a company?";
+            question.Options = ["A) 1889", "B) 1918", "C) 1895", "D) 1950"];
+            question.correctAnswer = 1;
+
+
+
         }
 
         /// <summary>
@@ -24,14 +35,15 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-             Window.ClearBackground(Color.Cyan);
+            Window.ClearBackground(Color.Cyan);
 
-            Text.Draw("What year did Nintendo start as a company?", 50, 5);
+            Text.Draw(question.Question, 50, 5);
+            Text.Draw(question.Options[0], 50, 100);
+            Text.Draw(question.Options[1], 50, 140);
+            Text.Draw(question.Options[2], 50, 180);
+            Text.Draw(question.Options[3], 50, 220);
             Text.Color = Color.Black;
             Text.Size = 30;
-        } 
-        
         }
     }
-
 }
