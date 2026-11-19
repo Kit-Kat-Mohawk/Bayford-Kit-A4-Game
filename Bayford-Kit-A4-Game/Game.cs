@@ -37,13 +37,36 @@ namespace MohawkGame2D
         {
             Window.ClearBackground(Color.Cyan);
 
-            Text.Draw(question.Question, 50, 5);
+            if (Input.IsMouseButtonPressed(MouseButton.Left))
+            {
+                Vector2 mousePos = Input.GetMousePosition();
+                if (mousePos.X >= 50 && mousePos.X <= 750)
+                {
+                    if (mousePos.Y >= 100 && mousePos.Y <= 140)
+                    {
+                        Console.WriteLine("Option A clicked");
+                    }
+                    else if (mousePos.Y >= 140 && mousePos.Y <= 180)
+                    {
+                        Console.WriteLine("Option B clicked");
+                    }
+                    else if (mousePos.Y >= 180 && mousePos.Y <= 220)
+                    {
+                        Console.WriteLine("Option C clicked");
+                    }
+                    else if (mousePos.Y >= 220 && mousePos.Y <= 260)
+                    {
+                        Console.WriteLine("Option D clicked");
+
+                        Text.Draw(question.Question, 50, 5);
             Text.Draw(question.Options[0], 50, 100);
             Text.Draw(question.Options[1], 50, 140);
             Text.Draw(question.Options[2], 50, 180);
             Text.Draw(question.Options[3], 50, 220);
             Text.Color = Color.Black;
             Text.Size = 30;
+
+
         }
     }
 }
