@@ -6,8 +6,8 @@ namespace MohawkGame2D
 {
     public class QAndA
     {
-        public string Question;
+        public string[] Questions;
        public string[] Options;
-        public int correctAnswer;
+        public int[] correctAnswers;
     }
 }

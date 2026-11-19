@@ -22,9 +22,9 @@ namespace MohawkGame2D
             Window.SetSize(800, 600);
 
             //     Setup QAndA
-            question.Question = "When did Nintendo start as a company?";
-            question.Options = ["A) 1889", "B) 1918", "C) 1895", "D) 1950"];
-            question.correctAnswer = 1;
+            question.Questions = ["When did Nintendo start as a company?", "In what two regions are slowpoke tails considered delicacies?", "Who is the current longest reigning women's champion?", "What is the most watched Kdrama in North America?", "What was the first popular Horror game?"];
+            question.Options = ["A) 1889", "B) 1918", "C) 1895", "D) 1950", "Alola/Galar, Hoenn/Johto, Kalos/Paldea, Sinnoh/Unova", "Rhea Ripley, Becky Lynch, Bayley, Alexa Bliss", "All of us are Dead, Sweet Home, Celebrity, Squid Game", "Haunted House, Alien, Bioshock, Resident Evil"];
+            question.correctAnswers = [1, 1, 3, 4, 4];
 
 
 
@@ -58,7 +58,7 @@ namespace MohawkGame2D
                     {
                         Console.WriteLine("Option D clicked");
 
-                        Text.Draw(question.Question, 50, 5);
+                        Text.Draw(question.Questions[0], 50, 5);
             Text.Draw(question.Options[0], 50, 100);
             Text.Draw(question.Options[1], 50, 140);
             Text.Draw(question.Options[2], 50, 180);
@@ -66,7 +66,10 @@ namespace MohawkGame2D
             Text.Color = Color.Black;
             Text.Size = 30;
 
+                       
+                       
 
-        }
+
+                    }
     }
 }
