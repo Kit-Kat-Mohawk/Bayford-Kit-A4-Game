@@ -59,17 +59,25 @@ namespace MohawkGame2D
                         Console.WriteLine("Option D clicked");
 
                         Text.Draw(question.Questions[0], 50, 5);
-            Text.Draw(question.Options[0], 50, 100);
-            Text.Draw(question.Options[1], 50, 140);
-            Text.Draw(question.Options[2], 50, 180);
-            Text.Draw(question.Options[3], 50, 220);
-            Text.Color = Color.Black;
-            Text.Size = 30;
+                        Text.Draw(question.Options[0], 50, 100);
+                        Text.Draw(question.Options[1], 50, 140);
+                        Text.Draw(question.Options[2], 50, 180);
+                        Text.Draw(question.Options[3], 50, 220);
+                        Text.Color = Color.Black;
+                        Text.Size = 30;
 
-                       
-                       
+
+                        Text.Draw(question.Questions[1], 50, 5);
+                        Text.Draw(question.Options[4], 50, 100);
+                        Text.Draw(question.Options[5], 50, 140);
+                        Text.Draw(question.Options[6], 50, 180);
+                        Text.Draw(question.Options[7], 50, 220);
+
 
 
                     }
+                }
+            }
+        }
     }
 }
