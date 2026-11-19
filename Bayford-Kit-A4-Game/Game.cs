@@ -23,7 +23,7 @@ namespace MohawkGame2D
 
             //     Setup QAndA
             question.Questions = ["When did Nintendo start as a company?", "In what two regions are slowpoke tails considered delicacies?", "Who is the current longest reigning women's champion?", "What is the most watched Kdrama in North America?", "What was the first popular Horror game?"];
-            question.Options = ["A) 1889", "B) 1918", "C) 1895", "D) 1950", "Alola/Galar, Hoenn/Johto, Kalos/Paldea, Sinnoh/Unova", "Rhea Ripley, Becky Lynch, Bayley, Alexa Bliss", "All of us are Dead, Sweet Home, Celebrity, Squid Game", "Haunted House, Alien, Bioshock, Resident Evil"];
+            question.Options = ["A) 1889", "B) 1918", "C) 1895", "D) 1950", "A) Alola/Galar", "B) Hoenn/Johto", "C) Kalos/Paldea", "D)Sinnoh/Unova", "A) Rhea Ripley", "B) Becky Lynch", "C) Bayley", "D) Alexa Bliss", "A)All of us are Dead", "B) Sweet Home", "C) Celebrity", "D) Squid Game", "A) Haunted House", "B) Alien", "C) Bioshock", "D) Resident Evil"];
             question.correctAnswers = [1, 1, 3, 4, 4];
 
 
@@ -36,6 +36,16 @@ namespace MohawkGame2D
         public void Update()
         {
             Window.ClearBackground(Color.Cyan);
+
+            Text.Color = Color.Black;
+            Text.Size = 30;
+            Text.Draw(question.Questions[0], 50, 5);
+            Text.Draw(question.Options[0], 50, 100);
+            Text.Draw(question.Options[1], 50, 140);
+            Text.Draw(question.Options[2], 50, 180);
+            Text.Draw(question.Options[3], 50, 220);
+            
+         
 
             if (Input.IsMouseButtonPressed(MouseButton.Left))
             {
@@ -58,20 +68,10 @@ namespace MohawkGame2D
                     {
                         Console.WriteLine("Option D clicked");
 
-                        Text.Draw(question.Questions[0], 50, 5);
-                        Text.Draw(question.Options[0], 50, 100);
-                        Text.Draw(question.Options[1], 50, 140);
-                        Text.Draw(question.Options[2], 50, 180);
-                        Text.Draw(question.Options[3], 50, 220);
-                        Text.Color = Color.Black;
-                        Text.Size = 30;
+                        
 
 
-                        Text.Draw(question.Questions[1], 50, 5);
-                        Text.Draw(question.Options[4], 50, 100);
-                        Text.Draw(question.Options[5], 50, 140);
-                        Text.Draw(question.Options[6], 50, 180);
-                        Text.Draw(question.Options[7], 50, 220);
+                     
 
 
 
