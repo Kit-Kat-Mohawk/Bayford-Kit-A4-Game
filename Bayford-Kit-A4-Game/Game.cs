@@ -1,6 +1,7 @@
 ﻿// Include the namespaces (code libraries) you need below.
 using MohawkGame2D;
 using System;
+using System.Diagnostics;
 using System.Numerics;
 
 // The namespace your code is in.
@@ -23,7 +24,7 @@ namespace MohawkGame2D
 
             //     Setup QAndA
             question.Questions = ["When did Nintendo start as a company?", "In what two regions are slowpoke tails considered delicacies?", "Who is the current longest reigning women's champion?", "What is the most watched Kdrama in North America?", "What was the first popular Horror game?"];
-            question.Options = ["A) 1889", "B) 1918", "C) 1895", "D) 1950", "A) Alola/Galar", "B) Hoenn/Johto", "C) Kalos/Paldea", "D)Sinnoh/Unova", "A) Rhea Ripley", "B) Becky Lynch", "C) Bayley", "D) Alexa Bliss", "A)All of us are Dead", "B) Sweet Home", "C) Celebrity", "D) Squid Game", "A) Haunted House", "B) Alien", "C) Bioshock", "D) Resident Evil"];
+            question.Options = ["1) 1889", "2) 1918", "3) 1895", "4) 1950", "1) Alola/Galar", "2) Hoenn/Johto", "3) Kalos/Paldea", "4)Sinnoh/Unova", "1) Rhea Ripley", "2) Becky Lynch", "3) Bayley", "4) Alexa Bliss", "1)All of us are Dead", "2) Sweet Home", "3) Celebrity", "4) Squid Game", "1) Haunted House", "2) Alien", "3) Bioshock", "4) Resident Evil"];
             question.correctAnswers = [1, 1, 3, 4, 4];
 
 
@@ -45,7 +46,8 @@ namespace MohawkGame2D
             Text.Draw(question.Options[2], 50, 180);
             Text.Draw(question.Options[3], 50, 220);
             
-         
+           
+
 
             if (Input.IsMouseButtonPressed(MouseButton.Left))
             {
@@ -67,6 +69,16 @@ namespace MohawkGame2D
                     else if (mousePos.Y >= 220 && mousePos.Y <= 260)
                     {
                         Console.WriteLine("Option D clicked");
+
+                        if(question.correctAnswers[0] == 1)
+                        {
+                            Console.WriteLine("Correct answer!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Incorrect answer");
+                        }
+                        
 
                         
 
